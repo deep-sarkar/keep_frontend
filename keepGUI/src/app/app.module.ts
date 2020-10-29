@@ -14,6 +14,7 @@ import { AccountService } from './services/account.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ValidationService } from './services/validation.service';
 import { UtilityService } from './services/utility.service';
+import { RegisterComponent } from './components/register/register.component';
 
 
 
@@ -22,7 +23,8 @@ import { UtilityService } from './services/utility.service';
     AppComponent,
     ComponentsComponent,
     LoginComponent,
-    LogoComponent
+    LogoComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
