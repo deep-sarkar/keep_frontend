@@ -9,6 +9,12 @@ import { RouterModule } from '@angular/router';
 import { Material } from './app.materials';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LogoComponent } from './components/logo/logo.component';
+import { HttpService } from './services/http.service';
+import { AccountService } from './services/account.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ValidationService } from './services/validation.service';
+import { UtilityService } from './services/utility.service';
+
 
 
 @NgModule({
@@ -23,9 +29,15 @@ import { LogoComponent } from './components/logo/logo.component';
     AppRoutingModule,
     RouterModule,
     Material,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HttpService,
+    AccountService,
+    ValidationService,
+    UtilityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
