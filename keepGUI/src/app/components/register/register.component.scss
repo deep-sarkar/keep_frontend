@@ -1,0 +1,93 @@
+@mixin responsive{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    width: 50%;
+    margin: auto;
+    margin-top: 1%;
+    border: 0.5px solid rgba(197, 196, 196, 0.8);
+    border-radius: 5px;
+    padding: 3% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    color: rgba($color: #000000, $alpha: 0.85);
+    .logo {
+        padding-top: 1%;
+    }
+    p {
+        font-size: 1.2em;
+        padding-top: 2%;
+    }
+    p:nth-child(2) {
+        font-size: 1.5em;
+        padding-top: 3%;
+    }
+}
+
+#form-field {
+    display: flex;
+    flex-wrap: wrap;
+    // border: 1px solid red;
+    justify-content: space-between;
+    padding-top: 4%;
+    .first-name, .last-name, .password, .confirm{
+        .mat-form-field{
+            width: 20vw;
+        }
+    }
+    .username, .email {
+        .mat-form-field{
+            width: 41.3vw;
+        }
+    }
+}
+
+#btn-div{
+    color: #1a73e8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2%;
+    .btn {
+        font-size: 1.1em;
+        padding: 1% 2%;
+    }
+    
+}
+
+@media only screen and (max-width:600px){
+    #card {
+        @include responsive();
+    }
+    #form-field {
+        @include responsive();
+        .first-name, .last-name, .password, .confirm, .username, .email{
+            .mat-form-field{
+                width: 90vw;
+            }
+        }
+        
+    }
+
+    #btn-div{
+        @include responsive();
+        .btn {
+            margin: 1vh  0;
+        }
+        
+    }
+}
