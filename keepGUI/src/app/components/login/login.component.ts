@@ -47,6 +47,8 @@ export class LoginComponent implements OnInit {
        if(response.code === 200){
          localStorage.setItem(this.username.value, response.token)
          this._utility.matMessage("Hello, " + this.username.value )
+       } else {
+         this._utility.matMessage(response.msg)
        }
       },
       error =>{
