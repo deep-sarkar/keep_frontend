@@ -1,0 +1,76 @@
+@mixin responsive {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-div {
+    width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    border: 0.5px solid rgba(197, 196, 196, 0.8);
+    border-radius: 5px;
+    padding: 5% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    color: rgba($color: #000000, $alpha: 0.85);
+    .logo {
+        padding-top: 1%;
+    }
+    p {
+        font-size: 1.2em;
+        padding-top: 2%;
+    }
+    p:nth-child(2) {
+        font-size: 1.5em;
+        padding-top: 3%;
+    }
+}
+
+#login-div{
+    width: 100%;
+    margin-top: 8%;
+    .username-div, .password-div{
+        .mat-form-field{
+            width: 100%;
+        }
+    }
+}
+
+.forgot-password-div{
+    position: relative;
+    left: 3%;
+    a {
+        text-decoration: none;
+        font-size: .9em;
+    }
+}
+
+.btn-div {
+    margin-top: 3%;
+    padding: 0 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .btn {
+        padding: 1% 4%;
+        color: #1a73e8;
+        font-size: 1.2em;
+        font-weight: 500;
+    }
+}
+
+@media only screen and (max-width : 700px){
+    #main-div{
+        @include responsive();
+    }
+}
