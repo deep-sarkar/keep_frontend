@@ -2,7 +2,9 @@ import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material';
 import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -10,13 +12,17 @@ import {MatButtonModule} from '@angular/material/button';
         MatCardModule,
         MatInputModule,
         ReactiveFormsModule,
-        MatButtonModule
+        MatButtonModule,
+        MatFormFieldModule,
+        MatSnackBarModule
     ],
     exports : [
         MatCardModule,
         MatInputModule,
         ReactiveFormsModule,
-        MatButtonModule
+        MatButtonModule,
+        MatFormFieldModule,
+        MatSnackBarModule
     ]
 })
 export class Material { }
