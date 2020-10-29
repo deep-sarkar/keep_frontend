@@ -14,42 +14,48 @@
         <div class="first-name">
             <mat-form-field appearance="outline">
                 <mat-label>First Name</mat-label>
-                <input matInput placeholder="First Name" type="text">
+                <input matInput placeholder="First Name" [formControl]= "first_name"  type="text">
+                <mat-error *ngIf="first_name.invalid">{{ firstnameErrorMsg() }}</mat-error>
             </mat-form-field>
         </div>
         <div class="last-name">
             <mat-form-field appearance="outline">
                 <mat-label>Last Name</mat-label>
-                <input matInput placeholder="Last Name" type="text">
+                <input matInput placeholder="Last Name" [formControl]= "last_name"  type="text">
+                <mat-error *ngIf="last_name.invalid">{{ lastnameErrorMsg() }}</mat-error>
             </mat-form-field>
         </div>
         <div class="username">
             <mat-form-field appearance="outline">
                 <mat-label>Username</mat-label>
-                <input matInput placeholder="Username" type="text">
+                <input matInput placeholder="Username" [formControl]= "username"  type="text">
+                <mat-error *ngIf="username.invalid">{{ usernameErrorMsg() }}</mat-error>
             </mat-form-field>
         </div>
         <div class="email">
             <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Email" type="text">
+                <input matInput placeholder="Email" [formControl]= "email"  type="text">
+                <mat-error *ngIf="email.invalid">{{ emailErrorMsg() }}</mat-error>
             </mat-form-field>
         </div>
         <div class="password">
             <mat-form-field appearance="outline">
                 <mat-label>Password</mat-label>
-                <input matInput placeholder="Password" type="password">
+                <input matInput placeholder="Password" [formControl]= "password"  type="password">
+                <mat-error *ngIf="password.invalid">{{ passwordErrorMsg() }}</mat-error>
             </mat-form-field>
         </div>
         <div class="confirm">
             <mat-form-field appearance="outline">
                 <mat-label>Confirm</mat-label>
-                <input matInput placeholder="Confirm" type="password">
+                <input matInput placeholder="Confirm" [formControl]= "confirm"  type="password">
+                <mat-error *ngIf="confirm.invalid">{{ confirmErrorMsg() }}</mat-error>
             </mat-form-field>
         </div>
     </div>
     <div id="btn-div">
         <button mat-button class="btn">Login</button>
-        <button mat-button class="btn" type="submit">Register</button>
+        <button mat-button class="btn" type="submit" (click)="register()">Register</button>
     </div>
 </div>
